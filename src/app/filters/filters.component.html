@@ -1,0 +1,19 @@
+<div class="filters-content">
+    <div class="filters-container">
+        <label for="title">Исполнитель</label>
+        <select class="form-control custom-filter" name="band" (change)="onBandChange($event.target.value)">
+            <option value="all" selected>Все</option>
+            <option value="{{band}}" *ngFor="let band of bands">{{band}}</option>
+        </select>
+        <label for="band">Жанр</label>
+        <select class="form-control custom-filter" name="genre" (change)="onGenreChange($event.target.value)">
+            <option value="all" selected>Все</option>
+            <option value="{{genre}}" *ngFor="let genre of genres">{{genre}}</option>
+        </select>
+        <label for="year">Год</label>
+        <select class="form-control custom-filter" name="year" (change)="onYearChange($event.target.value)">
+            <option value="all" selected>Все</option>
+            <option value="{{year}}" *ngFor="let year of years">{{year}}</option>
+        </select>
+    </div>
+</div>
